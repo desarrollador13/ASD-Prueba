@@ -1,0 +1,21 @@
+package com.backendAsd.config;
+
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.ws.config.annotation.WsConfigurationSupport;
+
+
+@Configuration
+@ComponentScan
+@EnableAsync
+@EnableAutoConfiguration
+
+@EnableTransactionManagement
+@EnableJpaRepositories(basePackages = {"com.backendAsd.repositorio"})
+public class BackendAsdConfiguracion extends WsConfigurationSupport{
+
+}

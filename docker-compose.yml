@@ -1,0 +1,41 @@
+version: '3.1'
+services:
+  app:
+    image: 'backend-asd'
+    build:
+      context: ./backendAsd
+      dockerfile: Dockerfile
+    container_name: app
+    depends_on:
+      - database
+    links:
+      - database
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/PRUEBA
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=123456789
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+    networks:
+      app-network:
+    ports:
+      - 8080:8080
+  database:
+    build:
+      context: ./Base-datos-mysql
+      dockerfile: Dockerfile
+    container_name: database
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456789"
+      MYSQL_DATABASE: "PRUEBA"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "123456789"
+    volumes:
+      - ./schemas:/var/lib/mysql:rw
+    networks:
+      app-network:
+networks:
+  app-network:

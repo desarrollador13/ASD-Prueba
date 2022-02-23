@@ -1,0 +1,5 @@
+package com.backendAsd.config;
+
+public class SwaggerConfiguracion {
+
+}

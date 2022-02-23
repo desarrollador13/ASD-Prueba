@@ -1,0 +1,8 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+            hibernate:
+                jdbc:
+                    batch_size: 10
+                order_inserts: true

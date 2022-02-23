@@ -1,0 +1,12 @@
+package com.backendAsd.config;
+
+import org.springframework.ws.config.annotation.WsConfigurationSupport;
+
+
+@Configuration
+@ComponentScan
+@EnableAsync
+@EnableAutoConfiguration
+public class BackendAsdConfiguracion extends WsConfigurationSupport{
+
+}

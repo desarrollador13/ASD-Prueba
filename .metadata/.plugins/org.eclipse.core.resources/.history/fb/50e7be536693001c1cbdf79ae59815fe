@@ -1,0 +1,17 @@
+package com.backendAsd.excepcion;
+
+public class CustomRuntimeException extends RuntimeException{
+	
+	public CustomRuntimeException(String... exceptionMsg) {
+		super(llenarMensaje(exceptionMsg));
+	}
+	
+	private static String llenarMensaje(String... exceptionMsg) {
+		StringBuilder mensaje = new StringBuilder();
+		for (String data : exceptionMsg) {
+			mensaje.append(mensaje).append(data);
+		}
+		return mensaje.toString();
+
+	}
+}

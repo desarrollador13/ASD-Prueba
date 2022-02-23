@@ -1,0 +1,22 @@
+package com.backendAsd.servicio.impl;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.backendAsd.dto.ActivoDto;
+import com.backendAsd.repositorio.ActivoRepositorio;
+import com.backendAsd.servicio.IActivoServicio;
+
+@Service
+public class ActivoServicioImpl implements IActivoServicio{
+	
+	@Autowired
+	private ActivoRepositorio activoRepositorio;
+	
+	public ActivoDto listarActivos() {
+		
+		ActivoDto activo = (ActivoDto) activoRepositorio.findAll();
+		return activo;
+	}
+}

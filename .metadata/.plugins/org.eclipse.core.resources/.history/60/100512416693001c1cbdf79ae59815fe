@@ -1,0 +1,5 @@
+package com.backendAsd.excepcion;
+
+public class CustomRuntimeException {
+
+}

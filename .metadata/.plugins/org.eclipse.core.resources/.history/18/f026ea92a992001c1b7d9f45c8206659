@@ -1,0 +1,21 @@
+package com.backendAsd.repositorio;
+
+import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.backendAsd.modelo.ActivoEntidad;
+import org.springframework.data.jpa.repository.Query;
+import com.backendAsd.dto.ActivoDto;
+
+@Repository
+public interface ActivoRepositorio extends JpaRepository<ActivoEntidad, Long>{
+	
+	@Query("SELECT new com.backendAsd.dto.ActivoDto"
+			+ " (activo.IdActivo, activo.Nombre, activo.Descripcion, activo.Tipo,activo.Serial, "
+			+ "  activo.NumeroInternoInventario, activo.Peso, activo.Alto"
+			+ " activo.Ancho, activo.Largo, activo.ValorCompra, activo.FechaCompra) "
+			+ "  FROM ActivoEntidad activo ")
+	List<ActivoDto> listar();
+
+}

@@ -1,0 +1,10 @@
+package com.backendAsd.servicio;
+
+import java.util.List;
+import com.backendAsd.dto.ActivoDto;
+
+public interface IActivoServicio {
+
+	List<ActivoDto> listarActivos();
+	List<ActivoDto> filtrosActivos();
+}

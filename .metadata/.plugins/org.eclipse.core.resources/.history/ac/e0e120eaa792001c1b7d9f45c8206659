@@ -1,0 +1,5 @@
+package com.backendAsd.repositorio;
+
+public interface IManejadorCrud <T,I extends Serializable> extends JpaRepository<T, I>{
+
+}

@@ -1,0 +1,16 @@
+package com.backendAsd.servicio;
+
+import java.util.List;
+
+import org.springframework.data.repository.query.Param;
+
+import com.backendAsd.dto.ActivoBodyDto;
+import com.backendAsd.dto.ActivoDto;
+import com.backendAsd.dto.FiltroRequestDto;
+
+public interface IActivoServicio {
+
+	List<ActivoDto> listarActivos();
+	List<ActivoDto> filtrosActivos(FiltroRequestDto filtro);
+	public int crearActivo(ActivoBodyDto body);
+}

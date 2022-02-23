@@ -1,0 +1,26 @@
+package com.backendAsd.controlador;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api/v1/activos")
+public class ActivosControlador {
+	
+	//@PostMapping
+	@GetMapping
+	public Map<String, Object> prueba() {
+		
+		Map<String, Object> rtn = new LinkedHashMap<>();
+	    rtn.put("name", "Jonathan");
+	    rtn.put("lastName", "Pinto Aroca");
+	    return rtn;
+		
+	}
+
+}

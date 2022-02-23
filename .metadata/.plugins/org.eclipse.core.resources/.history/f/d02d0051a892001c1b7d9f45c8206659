@@ -1,0 +1,11 @@
+package com.backendAsd.repositorio;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.backendAsd.modelo.ActivoEntidad;
+
+@Repository
+public interface ActivoRepositorio extends JpaRepository<ActivoEntidad, Long>{
+
+}

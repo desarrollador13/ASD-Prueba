@@ -1,0 +1,6 @@
+package com.backendAsd.servicio;
+
+public interface IActivoServicio {
+
+	String listarActivos();
+}

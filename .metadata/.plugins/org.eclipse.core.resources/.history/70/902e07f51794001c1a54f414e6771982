@@ -1,0 +1,21 @@
+###Database
+datasource.url=jdbc:mysql://localhost:3306/PRUEBA
+datasource.username=admin
+datasource.password=123456789
+
+datasource.driver-class-name=com.mysql.jdbc.Driver
+datasource.testWhileIdle=true
+datasource.testOnBorrow=true
+datasource.testOnReturn=false
+datasource.validationQuery=SELECT 1
+datasource.validationInterval=30000
+datasource.timeBetweenEvictionRunsMillis=30000
+datasource.maxActive=19
+datasource.minIdle=10
+datasource.maxWait=10000
+datasource.initialSize=10
+datasource.autoReconnect=true
+datasource.autoReconnectForPools=true
+datasource.is-connection-validation-required=true
+hibernate.globally_quoted_identifiers=true
+#Data source 

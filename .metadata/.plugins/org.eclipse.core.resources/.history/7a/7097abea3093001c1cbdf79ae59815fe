@@ -1,0 +1,30 @@
+package com.backendAsd.servicio.impl;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.backendAsd.dto.ActivoDto;
+import com.backendAsd.dto.FiltroRequestDto;
+import com.backendAsd.repositorio.ActivoRepositorio;
+import com.backendAsd.servicio.IActivoServicio;
+import com.backendAsd.dto.FiltroRequestDto;
+
+@Service
+public class ActivoServicioImpl implements IActivoServicio{
+	
+	@Autowired
+	private ActivoRepositorio activoRepositorio;
+	
+	@Override
+	public List<ActivoDto> listarActivos() {
+		List<ActivoDto> activo = activoRepositorio.listar();
+		return activo;
+	}
+	
+	@Override
+	List<ActivoDto> filtrosActivos(FiltroRequestDto filtro) {
+		return null;
+	}
+	
+}

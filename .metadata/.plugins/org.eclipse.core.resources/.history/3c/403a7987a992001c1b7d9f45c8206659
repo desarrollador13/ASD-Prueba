@@ -1,0 +1,33 @@
+package com.backendAsd.dto;
+
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class ActivoDto implements Serializable{
+	
+	private static final long serialVersionUID = 8547771531211171364L;
+	private Long IdActivo;
+	private String Nombre;
+	private String Descripcion;
+	private String Tipo;
+	private String Serial;
+	private String NumeroInternoInventario;
+	private String Peso;
+	private String Alto;
+	private String Ancho;
+	private String Largo;
+	private String ValorCompra;
+	private String FechaCompra;
+
+}

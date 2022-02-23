@@ -1,0 +1,19 @@
+package com.backendAsd.repositorio;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.backendAsd.modelo.ActivoEntidad;
+import org.springframework.data.jpa.repository.Query;
+import com.backendAsd.dto.ActivoDto;
+
+@Repository
+public interface ActivoRepositorio extends JpaRepository<ActivoEntidad, Long>{
+	
+	@Query("SELECT new com.backendAsd.modelo.ActivoEntidad"
+			+ " (firma.id, firma.primerNombre, firma.segundoNombre, firma.primerApellido,firma.segundoApellido, "
+			+ "  firma.numeroIdentificacion, cat.nombre, firma.tipoIdentificacion ) "
+			+ "  FROM ActivoEntidad activo ")
+	List<ActivoDto> listar(Long otrosiId);
+
+}

@@ -1,0 +1,15 @@
+package com.backendAsd.modelo;
+
+import java.io.Serializable;
+
+import javax.persistence.Table;
+
+
+@Table(name = "Activo")
+public class ActivoEntidad implements Serializable{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Activo_1")
+	@SequenceGenerator(name = "Activo_1", sequenceName = "Activo", allocationSize = 1)
+
+}

@@ -1,0 +1,9 @@
+package com.backendAsd.dto;
+
+import java.io.Serializable;
+
+public class ActivoDto implements Serializable{
+	
+	private static final long serialVersionUID = 8547771531211171364L;
+
+}

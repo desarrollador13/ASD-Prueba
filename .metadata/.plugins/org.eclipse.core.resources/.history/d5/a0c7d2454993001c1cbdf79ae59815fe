@@ -1,0 +1,18 @@
+package com.backendAsd.dto;
+
+import java.io.Serializable;
+
+public class ActivoBodyDto implements Serializable{
+	
+	private String nombre;
+	private String descripcion;
+	private String tipo;
+	private String serial;
+	private String numeroInternoInventario;
+	private String peso;
+	private String alto;
+	private String ancho;
+	private String largo;
+	private String valorCompra;
+
+}

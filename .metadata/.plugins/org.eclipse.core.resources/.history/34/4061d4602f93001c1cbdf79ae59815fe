@@ -1,0 +1,10 @@
+package com.backendAsd.dto;
+
+import java.io.Serializable;
+
+public class FiltroRequestDto implements Serializable{
+	
+	private static final long serialVersionUID = -2583245140288277668L;
+	
+	private String serial;
+}

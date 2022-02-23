@@ -1,0 +1,8 @@
+package com.backendAsd.servicio;
+
+import com.backendAsd.dto.ActivoDto;
+
+public interface IActivoServicio {
+
+	ActivoDto listarActivos();
+}

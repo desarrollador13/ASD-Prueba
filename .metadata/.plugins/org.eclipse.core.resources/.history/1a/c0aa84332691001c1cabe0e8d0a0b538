@@ -1,0 +1,7 @@
+package com.backendAsd.dto;
+
+import java.io.Serializable;
+
+public class ActivoDto implements Serializable{
+
+}
